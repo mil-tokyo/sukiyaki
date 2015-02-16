@@ -13,21 +13,18 @@ You can use GPGPU and multi core CPU via Sushi. If your system does not support 
 ## How to Try
 
 ### initialize and download dataset
-
-  git submodule init
-  git submodule update
-  ./sample/dataset/mnist/download.sh
-  # or
-  ./sample/dataset/cifar/download.sh
+	git submodule init
+	git submodule update
+	./sample/dataset/mnist/download.sh
+	# or
+	./sample/dataset/cifar/download.sh
 
 ### try sample program with node.js
-
-  node ./sample/node/main
-  > mnist
+	node ./sample/node/main
+	> mnist
 
 ### try sample program with browsers
-
-  ./sample/browser/server.sh
-  and access http://localhost:64649/sample/browser
+	./sample/browser/server.sh
+	and access http://localhost:64649/sample/browser
 
 If you would like to use GPGPU, check Sushi ( https://github.com/mil-tokyo/sushi ) and install a WebCL implementation.
