@@ -5,8 +5,8 @@ Sukiyaki is being developed to be the fastest Deep Learning Library for JavaScri
 
 ## Technical Features
 
-### Support of GPGPU and multi core CPU
-You can use GPGPU and multi core CPU via Sushi. If your system does not support WebCL, Sukiyaki uses standard JavaScript automatically.
+### Support of GPGPU and multi-core CPU
+You can use GPGPU and multi-core CPU via Sushi. If your system does not support WebCL, Sukiyaki uses standard JavaScript automatically.
 
 ### Support of Deep Convolutional Neural Network
 
