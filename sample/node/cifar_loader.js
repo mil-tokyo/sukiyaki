@@ -18,7 +18,7 @@ CifarLoader.load = function(dir, files) {
 	var images = [];
 	var labels = [];
 	for (var i = 0; i < files.length; i++) {
-		var bin = fs.readFileSync(dir + files[i]);
+		var bin = fs.readFileSync(dir + '/' + files[i]);
 		for (var j = 0; j < 10000; j++) {
 			var image = new $M(rows * depths, cols);
 			image.syncData();

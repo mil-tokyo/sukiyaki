@@ -156,7 +156,7 @@ SampleMain.prototype.learnLoop = function() {
 	var learn_loop_start_time = (new Date()).getTime();
 	console.log('epoch #' + this.epoch)
 	var from = 0;
-	var batch_per_once = 100;
+	var batch_per_once = 10;
 	var batch_loop = function() {
 		var last_time = (new Date()).getTime();
 		var to = Math.min(this.train_batches.length, from + batch_per_once);
@@ -188,7 +188,6 @@ SampleMain.prototype.learnLoop = function() {
 };
 
 (function() {
-	/*
 	console.log('Choose dataset (cifar or mnist)');
 	var readline = require("readline").createInterface(process.stdin, process.stdout);
 	readline.question("> ", function(value){
@@ -201,7 +200,5 @@ SampleMain.prototype.learnLoop = function() {
 			sample_main.start();
 		}
 	    readline.close();
-	});*/
-	var sample_main = new SampleMain('mnist');
-	sample_main.start();
+	});
 })();
