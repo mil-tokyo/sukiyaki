@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sukiyaki Browser Sample</title>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="./style.css">
+<script src="./util.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="../../sushi/src/sushi.js"></script>
+<script src="../../sushi/src/sushi_cl.js"></script>
+<script src="../../bin/sukiyaki.js"></script>
+<script src="./loader_for_browser.js"></script>
+<script src="./cifar_loader_for_browser.js"></script>
+<script src="./mnist_loader_for_browser.js"></script>
+</head>
+<body>
+<h1><a href="./">Sukiyaki Browser Sample</a></h1>
+<div id="choosedataset">
+<p>choose dataset :</p>
+<ul>
+	<li><a href="./index.html?dataset=cifar">cifar</a></li>
+	<li><a href="./index.html?dataset=mnist">mnist</a></li>
+</ul>
+</div>
+<div id="wrapper">
+	<div id="container">
+		<div class="box">
+			<h2>console</h2>
+			<div>epoch #<span id="epoch">0</span>; batch #<span id="batch">0</span>; </div>
+			<div id="console"></div>
+		</div>
+		<div class="box">
+			<h2>prediction</h2>
+			<h3>image to predict</h3>
+			<canvas id="predict_image"></canvas>
+			<h3>prediction answer</h3>
+			<div id="prediction_answer"></div>
+			<h3>correct answer</h3>
+			<div id="correct_answer"></div>
+			<h3>error rate</h3>
+			<div id="error_rate">100 %</div>
+			<h3>confusion matrix</h3>
+			<pre id="confusion_matrix"></pre>
+		</div>
+	</div>
+</div>
+<script src="./main.js"></script>
+<script>
+(function() {
+	if ($M.CL) {
+		Util.consoleLog('using device : ' + $M.CL.device_info + ' (' + $M.CL.platform_info + ')');
+	}
+	var getUrlVars = function() {
+		var vars = {};
+		var param = location.search.substring(1).split('&');
+		for (var i = 0; i < param.length; i++) {
+			var keySearch = param[i].search(/=/);
+			var key = '';
+			if (keySearch != -1)
+				key = param[i].slice(0, keySearch);
+			var val = param[i].slice(param[i].indexOf('=', 0) + 1);
+			if (key != '')
+				vars[key] = decodeURI(val);
+		}
+		return vars;
+	}
+	var dataset = getUrlVars()['dataset'];
+	if (dataset) {
+		$("#choosedataset").hide();
+		var browserSampleMain = new BrowserSampleMain(dataset);
+		browserSampleMain.start();
+	} else {
+		$("#wrapper").hide();
+	}
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+#wrapper {
+	margin: auto;
+	width: 1200px;
+}
+
+#container {
+	margin: auto;
+	overflow: hidden;
+	width: 100%
+}
+#container:after {
+	clear: both;
+}
+
+h1 {
+	text-align: center;
+}
+
+h1,h2,h3 {
+	border-bottom: 1px solid #333;
+	margin-left: 10px;
+}
+
+.box {
+	float: left;
+	width : 45%;
+	padding: 10px;
+}
+
+#console {
+	padding: 4px;
+	overflow-y: scroll;
+	height: 700px;
+	border: 1px solid #000;
+}
+
+#predict_image {
+	display: block;
+	margin: auto;
+	width: 160px;
+	height: 160px;
+	border: 1px solid #000;
+}
+
+#confusion_matrix {
+	font-family: monospace,serif;
+	border: 1px solid #000;
+	padding: 10px;
+	font-size: 8px;
+}
