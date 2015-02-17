@@ -168,15 +168,16 @@
 	};
 	
 	Sukiyaki.loadFromJson = function(data) {
-		var jsdeep = new JSDeep(data.layer_params);
-		for (var i = 0; i < jsdeep.layers.length; i++) {
-			jsdeep.layers[i].loadFromJson(data.layer_status[i]);
+		var sukiyaki = new Sukiyaki(data.layer_params);
+		for (var i = 0; i < sukiyaki.layers.length; i++) {
+			sukiyaki.layers[i].loadFromJson(data.layer_status[i]);
 		}
-		return jsdeep;
+		return sukiyaki;
 	};
 	
 	(('global', eval)('this')).Sukiyaki = Sukiyaki;
 })(typeof window === 'undefined', Sushi.Matrix);
+
 /* end : sukiyaki.js */
 
 /* begin : layers/layer_base.js */
