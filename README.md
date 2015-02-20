@@ -15,9 +15,10 @@ You can use GPGPU and multi-core CPU via Sushi. If your system does not support 
 ### initialize and download dataset
 	git submodule init
 	git submodule update
-	./sample/dataset/mnist/download.sh
+	cd ./sample/dataset/mnist
 	# or
-	./sample/dataset/cifar/download.sh
+	cd ./sample/dataset/cifar
+	./download.sh
 
 ### try sample program with node.js
 	node ./sample/node/main
