@@ -15,6 +15,7 @@
 </head>
 <body>
 <h1><a href="./">Sukiyaki Browser Sample</a></h1>
+<!--
 <div id="choosedataset">
 <p>choose dataset :</p>
 <ul>
@@ -22,6 +23,7 @@
 	<li><a href="./index.html?dataset=mnist">mnist</a></li>
 </ul>
 </div>
+-->
 <div id="wrapper">
 	<div id="container">
 		<div class="box">
@@ -50,6 +52,7 @@
 	if ($M.CL) {
 		Util.consoleLog('using device : ' + $M.CL.device_info + ' (' + $M.CL.platform_info + ')');
 	}
+	/*
 	var getUrlVars = function() {
 		var vars = {};
 		var param = location.search.substring(1).split('&');
@@ -65,6 +68,8 @@
 		return vars;
 	}
 	var dataset = getUrlVars()['dataset'];
+	*/
+	var dataset = 'mnist';
 	if (dataset) {
 		$("#choosedataset").hide();
 		var browserSampleMain = new BrowserSampleMain(dataset);

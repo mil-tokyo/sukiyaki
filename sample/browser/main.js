@@ -48,7 +48,7 @@ var BrowserSampleMain = function(dataset) {
 			break;
 		case 'mnist':
 			this.loader = MnistLoaderForBrowser;
-			this.data_base_url = '/sample/dataset/mnist/';
+			this.data_base_url = '/sukiyaki/sample/dataset/mnist/';
 			this.train_files = ['train-images-idx3-ubyte', 'train-labels-idx1-ubyte'];
 			this.test_files = ['t10k-images-idx3-ubyte', 't10k-labels-idx1-ubyte'];
 			this.layers = [
