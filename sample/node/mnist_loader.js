@@ -1,7 +1,6 @@
 'use strict';
 
-require('../../sushi/src/sushi');
-require('../../sushi/src/sushi_cl');
+require('milsushi');
 var $M = Sushi.Matrix;
 
 var assert = require('assert');

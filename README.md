@@ -15,12 +15,15 @@ You can use GPGPU and multi-core CPU via Sushi. If your system does not support 
 ## How to Try
 
 ### initialize and download dataset
-	git submodule init
-	git submodule update
+	node install
 	cd ./sample/dataset/mnist
 	# or
 	cd ./sample/dataset/cifar
 	./download.sh
+
+If you don't have node,
+	mkdir node_modules
+	git clone https://github.com/mil-tokyo/sushi node_modules/milsushi
 
 ### try sample program with node.js
 	node ./sample/node/main
