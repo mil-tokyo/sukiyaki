@@ -1,6 +1,6 @@
 {
   "name": "milsukiyaki",
-  "version": "0.0.1",
+  "version": "0.1.1",
   "description": "Deep Learning Library for JavaScript",
   "main": "index.js",
   "directories": {
