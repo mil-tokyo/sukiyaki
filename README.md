@@ -1,9 +1,9 @@
 # Sukiyaki JavaScript Library
 The Fastest Deep Learning Library for JavaScript
 
-Sukiyaki is being developed to be the fastest Deep Learning Library for JavaScript. It uses Sushi ( https://github.com/mil-tokyo/sushi ) inside for the fast matrix calculation.
+Sukiyaki is being developed as the fastest Deep Learning Library for JavaScript. It uses Sushi ( https://github.com/mil-tokyo/sushi ) inside for the fast matrix calculation.
 
-Related papers may be available ( http://mil-tokyo.github.io/miljs.html ).
+Related papers are available ( http://mil-tokyo.github.io/miljs.html ).
 
 ## Technical Features
 
@@ -15,12 +15,16 @@ You can use GPGPU and multi-core CPU via Sushi. If your system does not support 
 ## How to Try
 
 ### initialize and download dataset
-	git submodule init
-	git submodule update
+	node install
 	cd ./sample/dataset/mnist
 	# or
 	cd ./sample/dataset/cifar
 	./download.sh
+
+If you don't have node,
+
+	mkdir node_modules
+	git clone https://github.com/mil-tokyo/sushi node_modules/milsushi
 
 ### try sample program with node.js
 	node ./sample/node/main

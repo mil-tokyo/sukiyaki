@@ -1,0 +1,26 @@
+{
+  "name": "milsukiyaki",
+  "version": "0.1.1",
+  "description": "Deep Learning Library for JavaScript",
+  "main": "index.js",
+  "directories": {
+  },
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mil-tokyo/sukiyaki"
+  },
+  "dependencies": {
+    "milsushi": "*"
+  },
+  "keywords": [
+    "Matrix"
+  ],
+  "author": "Ken Miura, Masatoshi Hidaka, Tatsuya Harada",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mil-tokyo/sukiyaki/issues"
+  },
+  "homepage": "https://github.com/mil-tokyo/sukiyaki"
+}
