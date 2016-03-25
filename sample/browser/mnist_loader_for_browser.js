@@ -21,12 +21,14 @@ var MnistLoaderForBrowser = function(dir, files, max, batch_size, callback) {
 MnistLoaderForBrowser.prototype = new LoaderForBrowser();
 
 MnistLoaderForBrowser.prototype.loadFile = function() {
-	this.getFilesOrData(this.dir + this.files[0], function(ab) {
-		this.images_dataview = new DataView(ab);
+	this.getFilesOrData(this.dir + this.files[0] + '.deflate', function(ab) {
+    var uncompressed = zlib.inflate(new Uint8Array(ab));
+		this.images_dataview = new DataView(uncompressed.buffer);
 		this.startParseBatch();
 	}.bind(this));
-	this.getFilesOrData(this.dir + this.files[1], function(ab) {
-		this.labels_dataview = new DataView(ab);
+	this.getFilesOrData(this.dir + this.files[1] + '.deflate', function(ab) {
+    var uncompressed = zlib.inflate(new Uint8Array(ab));
+		this.labels_dataview = new DataView(uncompressed.buffer);
 		this.startParseBatch();
 	}.bind(this));
 };
